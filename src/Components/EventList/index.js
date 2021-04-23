@@ -1,9 +1,9 @@
 import React from "react";
-import data from "../../data";
+
 import AttendeeList from "../AttendeeList";
 import Map from '../Map/index'
 
-function EventList() {
+function EventList({data}) {
   return (
     <div>
       <ul>
