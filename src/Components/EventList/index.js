@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../../data";
+import AttendeeList from "../AttendeeList";
 
 function EventList() {
   return (
@@ -11,6 +12,7 @@ function EventList() {
             <li>{events.Description}</li>
             <li>{events.Date}</li>
             <li>{events.Time}</li>
+            <AttendeeList attendees={events.Attendees} />
           </div>
         ))}
       </ul>

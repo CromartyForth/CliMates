@@ -1,7 +1,16 @@
 import React from "react";
+import data from "../../data";
 
-function AttendeeList() {
-  return <div></div>;
+function AttendeeList({attendees}) {
+  return <ul>
+        {attendees.map((attendee) => (
+          <li>{attendee}</li>
+           ))
+        }
+     </ul>
+     
 }
+
+
 
 export default AttendeeList;
