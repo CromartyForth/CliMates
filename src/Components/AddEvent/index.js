@@ -40,6 +40,14 @@ function AddEvent({ inputData, setInputData }) {
         onChange={(e) => setDetails({ ...details, Time: e.target.value })}
         type="time"
       />
+            <input
+        onChange={(e) => setDetails({ ...details, Latitude: e.target.value })}
+        type="text" placeholder = "Latitude"
+      />
+            <input
+        onChange={(e) => setDetails({ ...details, Longitude: e.target.value })}
+        type="text" placeholder = "Longitude"
+      />
       <button onClick={addEvent}>Create an ecoFriendly event!</button>
     </div>
   );
