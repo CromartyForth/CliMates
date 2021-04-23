@@ -1,20 +1,27 @@
 import React from "react";
 
 import AttendeeList from "../AttendeeList";
-import Map from '../Map/index'
+import Map from "../Map/index";
 
-function EventList({data}) {
+function EventList({ inputData }) {
   return (
-    <div>
+    <div className="eventList">
       <ul>
-        {data.map((events) => (
-          <div>
-            <li>{events.Name}</li>
-            <li>{events.Description}</li>
-            <li>{events.Date}</li>
-            <li>{events.Time}</li>
-            <AttendeeList attendees={events.Attendees} />
-            <Map latProp={events.Latitude} longProp={events.Longitude}/>
+        {inputData.map((events) => (
+          <div className="gridContainer">
+            <div className="gridItem">
+              <h2>Event Details:</h2>
+              <li>{events.Name}</li>
+              <li>{events.Description}</li>
+              <li>{events.Date}</li>
+              <li>{events.Time}</li>
+            </div>
+            <div className="gridItem">
+              <AttendeeList attendees={events.Attendees} />
+            </div>
+            <div className="gridItem">
+              <Map latProp={events.Latitude} longProp={events.Longitude} />
+            </div>
           </div>
         ))}
       </ul>
